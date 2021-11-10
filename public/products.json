@@ -1,0 +1,128 @@
+[
+    {
+        "title": "Champion",
+        "brand": "Connondale",
+        "category": "men",
+        "price": "930",
+        "rating": "4.6",
+        "ratingCount": "513",
+        "img": "https://bike-products.netlify.app/product-1.jpg"
+    },
+    {
+        "title": "Peloton",
+        "brand": "Kona Bikes",
+        "category": "men",
+        "price": "850",
+        "rating": "4.2",
+        "ratingCount": "425",
+        "img": "https://bike-products.netlify.app/product-2.jpg"
+    },
+    {
+        "title": "Master Wheels",
+        "brand": "Colnago",
+        "category": "men",
+        "price": "950",
+        "rating": "4.4",
+        "ratingCount": "385",
+        "img": "https://bike-products.netlify.app/product-3.jpg"
+    },
+    {
+        "title": "Velo Transit",
+        "brand": "Bianchi",
+        "category": "men",
+        "price": "930",
+        "rating": "4.5",
+        "ratingCount": "449",
+        "img": "https://bike-products.netlify.app/product-4.jpg"
+    },
+    {
+        "title": "Magic Bikes",
+        "brand": "Raleigh",
+        "category": "women",
+        "price": "730",
+        "rating": "4",
+        "ratingCount": "635",
+        "img": "https://bike-products.netlify.app/product-5.jpg"
+    },
+    {
+        "title": "Mountain Ranger",
+        "brand": "Cervelo",
+        "category": "men",
+        "price": "990",
+        "rating": "4.8",
+        "ratingCount": "287",
+        "img": "https://bike-products.netlify.app/product-6.jpg"
+    },
+    {
+        "title": "Naughty Bike",
+        "brand": "Raleigh",
+        "category": "women",
+        "price": "735",
+        "rating": "4.1",
+        "ratingCount": "505",
+        "img": "https://bike-products.netlify.app/product-7.jpg"
+    },
+    {
+        "title": "Hunter Bike",
+        "brand": "Orbea",
+        "category": "men",
+        "price": "840",
+        "rating": "4.3",
+        "ratingCount": "505",
+        "img": "https://bike-products.netlify.app/product-8.jpg"
+    },
+    {
+        "title": "Buddy Cycle",
+        "brand": "Orbea",
+        "category": "men",
+        "price": "790",
+        "rating": "3.9",
+        "ratingCount": "210",
+        "img": "https://bike-products.netlify.app/product-9.jpg"
+    },
+    {
+        "title": "Happy Star",
+        "brand": "Connondale",
+        "category": "men",
+        "price": "750",
+        "rating": "3.8",
+        "ratingCount": "169",
+        "img": "https://bike-products.netlify.app/product-10.jpg"
+    },
+    {
+        "title": "Ridge Back",
+        "brand": "Raleigh",
+        "category": "women",
+        "price": "840",
+        "rating": "4.6",
+        "ratingCount": "389",
+        "img": "https://bike-products.netlify.app/product-11.jpg"
+    },
+    {
+        "title": "Ridge Back",
+        "brand": "Raleigh",
+        "category": "women",
+        "price": "840",
+        "rating": "4.6",
+        "ratingCount": "389",
+        "img": "https://bike-products.netlify.app/product-12.jpg"
+    },
+    {
+        "title": "Rollin",
+        "brand": "Kona Bikes",
+        "category": "women",
+        "price": "820",
+        "rating": "4.2",
+        "ratingCount": "537",
+        "img": "https://bike-products.netlify.app/product-13.jpg"
+    },
+    {
+        "title": "Urban Rider",
+        "brand": "Bianchi",
+        "category": "men",
+        "price": "780",
+        "rating": "4.3",
+        "ratingCount": "677",
+        "img": "https://bike-products.netlify.app/product-14.jpg"
+    }
+]

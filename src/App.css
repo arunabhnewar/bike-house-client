@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+
 .App {
+  font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
