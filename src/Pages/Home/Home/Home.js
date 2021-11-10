@@ -1,17 +1,18 @@
 import React from 'react';
-import Footer from '../../Shared/Footer/Footer';
-import Menubar from '../../Shared/Menubar/Menubar';
+import Award from '../Award/Award';
 import Banner from '../Banner/Banner';
 import Features from '../Features/Features';
+import News from '../News/News';
+import Offer from '../Offer/Offer';
 
 const Home = () => {
     return (
         <div>
-            <Menubar />
             <Banner />
             <Features />
-            <h1>Home page</h1>
-            <Footer />
+            <Offer />
+            <Award />
+            <News />
         </div>
     );
 };

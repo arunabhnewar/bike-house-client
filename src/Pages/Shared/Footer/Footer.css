@@ -1,0 +1,12 @@
+.footer-menu{
+    cursor: pointer;
+}
+.footer-menu:hover {
+    color: #fff !important;
+}
+.check-form {
+    cursor: pointer;
+}
+.check-input:hover{
+    color: #df453e !important;
+}

@@ -1,27 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
+import './Product.css';
 import { faStar as emptyStar } from "@fortawesome/free-regular-svg-icons";
 import { faStar as fullStar } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import './Feature.css';
 
-const Feature = ({ feature }) => {
-    const { _id, title, brand, category, rating, ratingCount, price, img } = feature;
+const Product = ({ product }) => {
+    const { _id, title, brand, category, rating, ratingCount, price, img } = product;
+
     return (
-        <div className="row mx-auto">
-            <div className="col-md-4 col-sm-12">
 
-                <Card className="mx-auto my-3 featured-item rounded-3" style={{ width: '16rem' }} >
-                    <div className="img-container">
+        <div className="row mx-auto">
+            <div className="col-md-3 col-sm-12">
+
+                <Card className="mx-auto my-3 product-item rounded-3" style={{ width: '16rem' }} >
+                    <div className="">
                         <Card.Img variant="top" src={img} />
-                        <div className="img-text">
-                            <h5>Featured</h5>
-                        </div>
+
                     </div>
 
-                    <div className="item-detail">
+                    <div className="product-detail">
                         <Card.Body>
                             <Card.Title style={{ color: '#163336' }} className="text-start fs-5 fw-bold">{title}</Card.Title>
                             <Card.Text className="text-start text-muted">
@@ -54,10 +54,9 @@ const Feature = ({ feature }) => {
                         </Card.Body>
                     </div>
                 </Card>
-
             </div>
         </div>
     );
 };
 
-export default Feature;
+export default Product;

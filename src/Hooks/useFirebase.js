@@ -13,7 +13,7 @@ const useFirebase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    const registerUser = (email, password, name, history) => {
+    const handleRegister = (email, password, name, history) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -39,7 +39,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    const loginUser = (email, password, location, history) => {
+    const handleLogin = (email, password, location, history) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -84,14 +84,27 @@ const useFirebase = () => {
 
 
     useEffect(() => {
-        fetch(`/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
 
+
+    const logOut = () => {
+        setIsLoading(true);
+        signOut(auth)
+            .then(() => {
+            })
+            .catch((error) => {
+
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('/users', {
+        fetch('http://localhost:5000/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -101,25 +114,15 @@ const useFirebase = () => {
             .then()
     }
 
-    const logout = () => {
-        setIsLoading(true);
-        signOut(auth).then(() => {
-        })
-            .catch((error) => {
-
-            })
-            .finally(() => setIsLoading(false));
-    }
-
     return {
         user,
         admin,
         isLoading,
-        registerUser,
-        loginUser,
+        handleRegister,
+        handleLogin,
         signInWithGoogle,
         authError,
-        logout
+        logOut
     }
 }
 
