@@ -6,6 +6,7 @@
         "price": "930",
         "rating": "4.6",
         "ratingCount": "513",
+        "description": "The Connondale Explore was the brands first gravel bike released in 2016 when the gravel industry started to hit off.",
         "img": "https://bike-products.netlify.app/product-1.jpg"
     },
     {
@@ -15,6 +16,7 @@
         "price": "850",
         "rating": "4.2",
         "ratingCount": "425",
+        "description": "Today, their range consists of high-end road and gravel bikes. Kona Bikes is also a well-known sponsor in the cycling scene.",
         "img": "https://bike-products.netlify.app/product-2.jpg"
     },
     {
@@ -24,6 +26,7 @@
         "price": "950",
         "rating": "4.4",
         "ratingCount": "385",
+        "description": "The Denver based American brand pride themselves on building quality carbon and titanium framed bikes, and have won awards for their workmanship.",
         "img": "https://bike-products.netlify.app/product-3.jpg"
     },
     {
@@ -33,6 +36,7 @@
         "price": "930",
         "rating": "4.5",
         "ratingCount": "449",
+        "description": "You may not have heard of them due to their limited quantity runs of bikes, but if you’re after a handmade American bicycle.",
         "img": "https://bike-products.netlify.app/product-4.jpg"
     },
     {
@@ -42,6 +46,7 @@
         "price": "730",
         "rating": "4",
         "ratingCount": "635",
+        "description": "An iconic bike brand with a specific niché orientated set of bikes on its range.It was their main mission when they started in 2008.",
         "img": "https://bike-products.netlify.app/product-5.jpg"
     },
     {
@@ -51,6 +56,7 @@
         "price": "990",
         "rating": "4.8",
         "ratingCount": "287",
+        "description": "Cervelo bikes specializes in on-road riding only, hence the reason you’ll find a fine selection of Road, Gravel, Cyclocross, and Hybrid bikes.",
         "img": "https://bike-products.netlify.app/product-6.jpg"
     },
     {
@@ -60,6 +66,7 @@
         "price": "735",
         "rating": "4.1",
         "ratingCount": "505",
+        "description": "Something that sets them apart from other brands is the fact that most of the bikes’ frames are generally made of steel.",
         "img": "https://bike-products.netlify.app/product-7.jpg"
     },
     {
@@ -69,6 +76,7 @@
         "price": "840",
         "rating": "4.3",
         "ratingCount": "505",
+        "description": "All of their bikes have a little twist to their design, while the whole build is designed for intermediate to advanced users.",
         "img": "https://bike-products.netlify.app/product-8.jpg"
     },
     {
@@ -78,6 +86,7 @@
         "price": "790",
         "rating": "3.9",
         "ratingCount": "210",
+        "description": "Orbea road bikes have a racing pedigree, with multiple Grand Tour wins under their belts including the most recent edition of Buddy Cycle.",
         "img": "https://bike-products.netlify.app/product-9.jpg"
     },
     {
@@ -87,6 +96,7 @@
         "price": "750",
         "rating": "3.8",
         "ratingCount": "169",
+        "description": "Cannondale is one of the most popular bicycle brands in the world. A relatively young brand, it was founded in 1971 in Connecticut, USA.",
         "img": "https://bike-products.netlify.app/product-10.jpg"
     },
     {
@@ -96,6 +106,7 @@
         "price": "840",
         "rating": "4.6",
         "ratingCount": "389",
+        "description": "Their range consists of well-engineer folding, and electric folding bikes with rich history and attention to detail.",
         "img": "https://bike-products.netlify.app/product-11.jpg"
     },
     {
@@ -105,6 +116,7 @@
         "price": "840",
         "rating": "4.6",
         "ratingCount": "389",
+        "description": "They are known for their pioneering manufacturing, such as being one of the first brands to produce carbon fiber road bikes.",
         "img": "https://bike-products.netlify.app/product-12.jpg"
     },
     {
@@ -114,6 +126,7 @@
         "price": "820",
         "rating": "4.2",
         "ratingCount": "537",
+        "description": "They are well regarded for building beautiful road bikes but they have more recently ventured into gravel and e-bikes.",
         "img": "https://bike-products.netlify.app/product-13.jpg"
     },
     {
@@ -123,6 +136,7 @@
         "price": "780",
         "rating": "4.3",
         "ratingCount": "677",
+        "description": "They are focused on making affordable entry-level and mid-range bikes. Their affordability and no-nonsense branding make them a cult favorite.",
         "img": "https://bike-products.netlify.app/product-14.jpg"
     }
 ]

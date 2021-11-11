@@ -69,7 +69,7 @@ const Purchase = () => {
                             />{' '} <span style={{ color: "#163336" }}>{purchases?.rating}</span> |
                             <span style={{ color: "#163336" }} >( total {purchases?.ratingCount} reviews given) </span>
 
-                            {/* <h6 className="text-white pt-2 pb-1">Description: {purchases?.description}</h6> */}
+                            <h6 style={{ color: "#163336" }} className="pt-2 pb-1">Description: {purchases?.description}</h6>
 
                             <h2 style={{ color: "#163336" }} className="fw-bold pt-2"> <sup>$</sup>{purchases?.price} <span className="fs-5">Only</span> </h2>
 
