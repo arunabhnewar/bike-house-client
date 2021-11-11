@@ -11,6 +11,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Login from './Pages/Login/Login/Login';
 import Registration from './Pages/Login/Registration/Registration';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
+            <Route exact path="*">
+              <NotFound />
+            </Route>
           </Switch>
           <Footer />
         </Router>

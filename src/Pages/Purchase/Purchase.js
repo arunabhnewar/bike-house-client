@@ -26,8 +26,8 @@ const Purchase = () => {
     }, [id, reset])
 
     const onSubmit = data => {
-        // data.status = 'pending'
-        // delete data._id;
+        data.status = 'pending'
+        delete data._id;
         fetch('http://localhost:5000/purchases', {
             method: 'POST',
             headers: {
