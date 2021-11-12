@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import './Feature.css';
 
 const Feature = ({ feature }) => {
-    const { _id, title, brand, category, rating, ratingCount, price, img } = feature;
+    const { _id, title, brand, category, rating, price, img } = feature;
     return (
         <div className="row mx-auto">
             <div className="col-md-4 col-sm-12">
@@ -39,7 +39,7 @@ const Feature = ({ feature }) => {
                                     fullSymbol={<FontAwesomeIcon icon={fullStar} />}
                                 />{' '}
                                 <span className="text-muted">{rating}</span>
-                                <span className="text-muted">( {ratingCount} reviews)</span>
+                                {/* <span className="text-muted">( {ratingCount} reviews)</span> */}
                             </div>
 
                             <Card.Text style={{ color: '#df453e' }} className="text-start fs-5 fw-bold pt-2">

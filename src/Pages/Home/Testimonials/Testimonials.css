@@ -1,0 +1,16 @@
+.testimonials-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+@media only screen and (max-width: 688px) {
+    .testimonials-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (min-width: 688px) {
+    .testimonials-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

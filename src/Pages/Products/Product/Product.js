@@ -8,7 +8,7 @@ import { faStar as emptyStar } from "@fortawesome/free-regular-svg-icons";
 import { faStar as fullStar } from '@fortawesome/free-solid-svg-icons';
 
 const Product = ({ product }) => {
-    const { _id, title, brand, category, rating, ratingCount, price, img } = product;
+    const { _id, title, brand, category, rating, price, img } = product;
 
     return (
 
@@ -39,7 +39,7 @@ const Product = ({ product }) => {
                                     fullSymbol={<FontAwesomeIcon icon={fullStar} />}
                                 />{' '}
                                 <span className="text-muted">{rating}</span>
-                                <span className="text-muted">( {ratingCount} reviews)</span>
+                                {/* <span className="text-muted">( {ratingCount} reviews)</span> */}
                             </div>
 
                             <Card.Text style={{ color: '#df453e' }} className="text-start fs-5 fw-bold pt-2">

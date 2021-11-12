@@ -1,4 +1,5 @@
 .featured-item {
+  cursor: pointer;
   transition: all .9s;
 }
 
