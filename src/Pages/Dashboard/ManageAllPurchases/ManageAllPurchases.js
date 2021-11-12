@@ -9,7 +9,7 @@ const ManageAllPurchases = () => {
     const [managePurchases, setManagePurchases] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/purchases')
+        fetch('https://damp-cove-65094.herokuapp.com/purchases')
             .then(res => res.json())
             .then(data => setManagePurchases(data))
     }, [shippingConfirm])
@@ -17,7 +17,7 @@ const ManageAllPurchases = () => {
     const deleteHandle = id => {
         const proceed = window.confirm('Are you sure want to cancel');
         if (proceed) {
-            const url = `http://localhost:5000/purchases/${id}`;
+            const url = `https://damp-cove-65094.herokuapp.com/purchases/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -35,7 +35,7 @@ const ManageAllPurchases = () => {
     const handleShipping = id => {
         const shipping = window.confirm('Are you sure to shipping purchase?')
         if (shipping) {
-            fetch(`http://localhost:5000/purchases/${id}`, {
+            fetch(`https://damp-cove-65094.herokuapp.com/purchases/${id}`, {
                 method: 'PUT',
             })
                 .then(res => res.json())

@@ -14,7 +14,7 @@ import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { user, admin } = useAuth();
+    const { admin } = useAuth();
     return (
         <>
             <div className="container-fluid">

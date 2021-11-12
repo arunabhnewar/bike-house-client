@@ -6,7 +6,7 @@ const Features = () => {
     const [features, setFeatures] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://damp-cove-65094.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setFeatures(data));
     }, [])

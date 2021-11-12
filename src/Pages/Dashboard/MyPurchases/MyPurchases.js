@@ -11,7 +11,7 @@ const MyPurchases = () => {
     const { email } = user;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchases/${email}`)
+        fetch(`https://damp-cove-65094.herokuapp.com/purchases/${email}`)
             .then(res => res.json())
             .then(data => setPurchases(data))
     }, [email])
@@ -19,7 +19,7 @@ const MyPurchases = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/purchases/${id}`;
+            const url = `https://damp-cove-65094.herokuapp.com/purchases/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

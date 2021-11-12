@@ -16,7 +16,7 @@ const Purchase = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://damp-cove-65094.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 const purchases = data?.find(purchase => purchase?._id === id)
@@ -28,7 +28,7 @@ const Purchase = () => {
     const onSubmit = data => {
         data.status = 'pending'
         delete data._id;
-        fetch('http://localhost:5000/purchases', {
+        fetch('https://damp-cove-65094.herokuapp.com/purchases', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

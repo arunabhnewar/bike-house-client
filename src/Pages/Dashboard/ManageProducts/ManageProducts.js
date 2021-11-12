@@ -7,7 +7,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://damp-cove-65094.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -16,7 +16,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to remove');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://damp-cove-65094.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
