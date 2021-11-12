@@ -8,3 +8,18 @@
 .product-item:hover .product-detail {
     background-color: #F5F5DC;
 }
+
+.product-img {
+    overflow: hidden;
+}
+
+.product-img img{
+    cursor: zoom-in;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.9s ease;
+}
+
+.product-img img:hover {
+    transform: scale(1.2);
+}

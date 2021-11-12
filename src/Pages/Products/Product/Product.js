@@ -16,7 +16,7 @@ const Product = ({ product }) => {
             <div className="col-md-3 col-sm-12">
 
                 <Card className="mx-auto my-3 product-item rounded-3" style={{ width: '16rem' }} >
-                    <div className="">
+                    <div className="product-img">
                         <Card.Img variant="top" src={img} />
 
                     </div>
