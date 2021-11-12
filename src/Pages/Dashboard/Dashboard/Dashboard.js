@@ -84,8 +84,6 @@ const Dashboard = () => {
                             <AdminRoute path={`${path}/manageProducts`}>
                                 <ManageProducts />
                             </AdminRoute>
-
-
                         </Switch>
                     </div>
                 </div>

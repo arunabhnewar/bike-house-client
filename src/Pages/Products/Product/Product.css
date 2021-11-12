@@ -1,3 +1,10 @@
+.product-item {
+    transition: all .9s;
+}
+.product-item:hover {
+    box-shadow: 0 0 20px rgb(8, 8, 153);
+}
+
 .product-item:hover .product-detail {
     background-color: #F5F5DC;
 }

@@ -50,7 +50,7 @@ const Purchase = () => {
                 <h1 className="py-5 fw-bold" style={{ color: '#163336' }}>Purchase Product</h1>
                 <div className="row mx-auto gx-5">
 
-                    <div className="col-md-7 col-sm-12">
+                    <div className="col-md-7 col-sm-12 align-self-center">
                         <div className="text-start">
                             <img className="img-fluid w-50 pb-3" src={purchases?.img} alt="" />
                         </div>
@@ -81,25 +81,47 @@ const Purchase = () => {
                         <h1 className="pb-3 text-white fw-bold">Update Important information</h1>
 
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <input className='p-2 me-2 mb-3 border-0 rounded-3' defaultValue={user?.displayName} {...register("name")} />
+                            <input
+                                className='p-2 me-2 mb-3 border-0 rounded-3'
+                                defaultValue={user?.displayName}
+                                {...register("name")} />
 
-                            <input className='p-2 me-2 mb-3 border-0 rounded-3' defaultValue={user?.email} {...register("email", { required: true })} />
+                            <input
+                                className='p-2 me-2 mb-3 border-0 rounded-3'
+                                defaultValue={user?.email}
+                                {...register("email", { required: true })} />
 
                             {errors?.email && <span className="error">This field is required</span>}
                             <br />
 
-                            <input className='p-2 me-2 mb-3 border-0 rounded-3' placeholder="Address" defaultValue="" {...register("address")} />
+                            <input
+                                className='p-2 me-2 mb-3 border-0 rounded-3'
+                                placeholder="Address"
+                                defaultValue="" {...register("address")} />
 
-                            <input className='p-2 me-2 mb-3 border-0 rounded-3' placeholder="City" defaultValue="" {...register("city")} />
+                            <input
+                                className='p-2 me-2 mb-3 border-0 rounded-3'
+                                placeholder="City"
+                                defaultValue="" {...register("city")} />
 
                             <br />
 
-                            <input className='p-2 me-2 mb-3 border-0 rounded-3' placeholder="Phone" defaultValue="" {...register("phone")} />
+                            <input
+                                className='p-2 me-2 mb-3 border-0 rounded-3'
+                                placeholder="Phone"
+                                defaultValue="" {...register("phone")} />
 
-                            <input className='p-2 me-2 mb-3 border-0 rounded-3' defaultValue={purchases?._id} {...register("vacation")} />
+                            <input
+                                className='p-2 me-2 mb-3 border-0 rounded-3'
+                                defaultValue={purchases?._id}
+                                {...register("purchase")} />
                             <br />
 
-                            <input style={{ backgroundColor: '#163336' }} className="border-0 w-50 text-white mb-5 rounded-3 p-2" type="submit" value="Purchase" />
+                            <input
+                                style={{ backgroundColor: '#163336' }}
+                                className="border-0 w-50 text-white mb-5 rounded-3 p-2"
+                                type="submit"
+                                value="Purchase" />
 
                         </form>
                     </div>

@@ -138,5 +138,11 @@
         "ratingCount": "677",
         "description": "They are focused on making affordable entry-level and mid-range bikes. Their affordability and no-nonsense branding make them a cult favorite.",
         "img": "https://bike-products.netlify.app/product-14.jpg"
+    },
+    {
+        "name": "016-Arunabh newar devil",
+        "city": "rangamati",
+        "ratting": "4.5",
+        "comment": "abcdfsj"
     }
 ]

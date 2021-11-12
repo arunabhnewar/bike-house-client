@@ -1,0 +1,10 @@
+.award-item{
+    background-color: #42683c !important;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.award-item:hover{
+    background-color: black !important;
+    transition: 0.9s ;
+}

@@ -47,6 +47,7 @@ const ManageAllPurchases = () => {
                 })
         }
     }
+
     return (
         <div className="container-fluid py-5" style={{ backgroundColor: "#80d572" }}>
             <h1 className="pt-5 fw-bold" style={{ color: '#163336' }}>Manage All Purchases Overview</h1>
