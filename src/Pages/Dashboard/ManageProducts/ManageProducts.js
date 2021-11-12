@@ -1,16 +1,35 @@
 import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
+
     useEffect(() => {
         fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
+
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure want to remove');
+        if (proceed) {
+            const url = `http://localhost:5000/products/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        alert('Successfully removed')
+                        const remaining = products.filter(product => product?._id !== id);
+                        setProducts(remaining);
+                    }
+                });
+        }
+    }
 
     return (
         <div className="container-fluid py-5" style={{ backgroundColor: "#80d572" }}>
@@ -32,20 +51,15 @@ const ManageProducts = () => {
                             ))}
 
                             {Array.from({ length: 1 }).map((_, index) => (
+                                <th key={index}>Category</th>
+                            ))}
+
+                            {Array.from({ length: 1 }).map((_, index) => (
                                 <th key={index}>Price</th>
                             ))}
 
-
                             {Array.from({ length: 1 }).map((_, index) => (
-                                <th key={index}>Shipping</th>
-                            ))}
-
-                            {Array.from({ length: 1 }).map((_, index) => (
-                                <th key={index}>Cancel</th>
-                            ))}
-
-                            {Array.from({ length: 1 }).map((_, index) => (
-                                <th key={index}>Confirm</th>
+                                <th key={index}>Remove</th>
                             ))}
 
 
@@ -65,35 +79,26 @@ const ManageProducts = () => {
                                 ))}
 
                                 {Array.from({ length: 1 }).map((_, index) => (
+                                    <td key={index}>{product?.category} </td>
+                                ))}
+
+                                {Array.from({ length: 1 }).map((_, index) => (
                                     <td key={index}><sup>$</sup>{product?.price} </td>
-                                ))}
-
-                                {Array.from({ length: 1 }).map((_, index) => (
-                                    <td key={index}>{product?.status} </td>
-                                ))}
-
-                                {Array.from({ length: 1 }).map((_, index) => (
-                                    <td key={index}>
-                                        <button className="border-0 text-danger">
-                                            <FontAwesomeIcon icon={faTrashAlt} />
-                                        </button>
-                                    </td>
                                 ))}
 
                                 {Array.from({ length: 1 }).map((_, index) => (
                                     <td key={index}>
                                         <button className="border-0 text-danger"
-                                        >
-                                            <FontAwesomeIcon style={{ color: 'green' }} icon={faCheck} />
+                                            onClick={() => handleDelete(product?._id)}>
+                                            <FontAwesomeIcon icon={faTrashAlt} />
                                         </button>
                                     </td>
                                 ))}
+
                             </tr>
                         </tbody>
                     ))}
-
                 </Table>
-
             </div>
         </div>
     );
@@ -101,5 +106,4 @@ const ManageProducts = () => {
 
 export default ManageProducts;
 
-// onClick={() => deleteHandle(managePurchase?._id)}
-// onClick={() => handleShipping(managePurchase?._id)}
+
