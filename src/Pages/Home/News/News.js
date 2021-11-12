@@ -22,7 +22,7 @@ const News = () => {
 
                         <p className="text-start text-muted">Always back your bike into the curn and sit where you can seet it. The sound of the throttle makes me fall in love with our bike.</p>
 
-                        <div className="text-start">
+                        <div className="text-start mb-3">
                             <Button className="text-white" style={{ backgroundColor: '#163336' }}> Read More</Button>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ const News = () => {
 
                         <p className="text-start text-muted">Ride it like a pro it's not just riding The best rides happen on two wheel. It will lead your way. Ride and live today.</p>
 
-                        <div className="text-start">
+                        <div className="text-start mb-3">
                             <Button className="text-white" style={{ backgroundColor: '#163336' }}> Read More</Button>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const News = () => {
 
                         <p className="text-start text-muted">You can't be happier, if you won't ride your bike. A long ride in your bike will clear your mind. And the cycle can sing on the streets of a city.</p>
 
-                        <div className="text-start">
+                        <div className="text-start mb-3">
                             <Button className="text-white" style={{ backgroundColor: '#163336' }}> Read More</Button>
                         </div>
                     </div>

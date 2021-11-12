@@ -9,7 +9,7 @@ const Testimonial = ({ testimonial }) => {
     const { name, city, ratting, comment } = testimonial;
     return (
         <div className="row mx-auto">
-            <div className="col-md-4 col-sm-12">
+            <div className="col-md-4 col-sm-12 py-3">
                 <div className="card testimonial-card" style={{ width: '18rem' }}>
                     <div className="card-header">
                         <Rating readonly

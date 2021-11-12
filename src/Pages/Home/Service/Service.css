@@ -1,0 +1,14 @@
+.service-container{
+    margin-top: -60px;
+}
+
+.service-img img{
+    background-color: orange;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.service-img img:hover {
+    background-color: black;
+    transition: 1.2s;
+}
