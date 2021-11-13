@@ -11,9 +11,9 @@ import ManageProducts from '../ManageProducts/ManageProducts';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBicycle, faCartPlus, faCogs, faLongArrowAltLeft, faTasks, faUserCog } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, faCogs, faLongArrowAltLeft, faPlusSquare, faTasks, faUserCog, faUserShield } from '@fortawesome/free-solid-svg-icons';
 import { faCcVisa } from '@fortawesome/free-brands-svg-icons';
-import { faStar } from '@fortawesome/free-regular-svg-icons';
+import { faStar, faUser } from '@fortawesome/free-regular-svg-icons';
 
 
 
@@ -34,7 +34,7 @@ const Dashboard = () => {
 
                                 <h2 className="accordion-header" id="headingOne">
                                     <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{ backgroundColor: '#2F4F4F', color: "#df453e" }}>
-                                        Admin Dashboard
+                                        <FontAwesomeIcon className="m-1" icon={faUserShield} />  Admin Dashboard
                                     </button>
                                 </h2>
                                 <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -49,7 +49,7 @@ const Dashboard = () => {
                                         <Link className="text-decoration-none" to={`${url}/addProduct`}>
                                             <li className="dashboard-menu-item text-start"
                                                 style={{ color: "#fff" }}>
-                                                <FontAwesomeIcon icon={faBicycle} /> Add Product</li>
+                                                <FontAwesomeIcon icon={faPlusSquare} /> Add Product</li>
                                         </Link>
 
                                         <Link className="text-decoration-none" to={`${url}/manageProducts`}>
@@ -71,7 +71,7 @@ const Dashboard = () => {
                         <div className="accordion-item border-white" style={{ backgroundColor: '#2F4F4F' }}>
                             <h2 className="accordion-header" id="headingTwo">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={{ backgroundColor: '#2F4F4F', color: '#fff' }}>
-                                    User Dashboard
+                                    <FontAwesomeIcon className="m-1" icon={faUser} />  User Dashboard
                                 </button>
                             </h2>
                             <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">

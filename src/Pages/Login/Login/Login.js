@@ -48,7 +48,6 @@ const Login = () => {
                     {isLoading && <Spinner animation="border" variant="danger" />}
                     {user?.email && <Alert >User Created successfully!</Alert>}
 
-
                     <form
                         onSubmit={handleLoginSubmit}
                         className="pt-5">

@@ -21,6 +21,7 @@ function App() {
         <Router>
           <Menubar />
           <Switch>
+
             <Route exact path="/">
               <Home />
             </Route>
@@ -45,6 +46,7 @@ function App() {
             <Route exact path="*">
               <NotFound />
             </Route>
+
           </Switch>
           <Footer />
         </Router>

@@ -1,0 +1,9 @@
+.mission-section{
+    background-image: linear-gradient(rgba(80, 79, 79, 0.5), rgba(0, 0, 0, 0.5)), url(../../../images/mission.jpg);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 !important;
+}

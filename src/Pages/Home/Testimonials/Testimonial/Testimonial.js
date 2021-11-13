@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as emptyStar } from "@fortawesome/free-regular-svg-icons";
-import { faStar as fullStar } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft, faStar as fullStar } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Rating from 'react-rating';
 import './Testimonial.css';
@@ -23,7 +23,9 @@ const Testimonial = ({ testimonial }) => {
                     <div className="card-body">
                         <blockquote className="blockquote mb-0">
                             <p style={{ fontSize: "14px", textAlign: "left" }}
-                                className="text-muted">{comment}</p>
+                                className="text-muted">
+                                <FontAwesomeIcon style={{ fontSize: '24px', color: '#df453e' }} icon={faQuoteLeft} /> <br />
+                                {comment}</p>
                             <hr />
                             <footer className="blockquote-footer fw-bold" style={{ fontSize: "16px", color: '#163336' }}>{name}, <cite title="Source Title">{city}</cite></footer>
 

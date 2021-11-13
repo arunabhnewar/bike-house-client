@@ -26,7 +26,7 @@ const Registration = () => {
             alert('Wrong Password');
             return
         }
-        handleRegister(loginData.email, loginData.password, loginData.name, history);
+        handleRegister(loginData.name, loginData.email, loginData.password, history);
         e.preventDefault();
     }
     return (

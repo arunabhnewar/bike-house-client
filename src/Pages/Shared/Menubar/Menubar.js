@@ -46,12 +46,12 @@ const Menubar = () => {
                                     style={{ color: '#163336' }}
                                 >Dashboard</Nav.Link>
 
-                                <Nav.Link
+                                <li
                                     as={Link}
                                     onClick={logOut}
                                     className="fw-bold nav-menu"
-                                    style={{ color: '#163336' }}
-                                >Sign Out</Nav.Link>
+                                    style={{ color: '#163336', listStyle: "none", cursor: "pointer" }}
+                                >Sign Out</li>
 
                                 <NavDropdown
                                     title={
@@ -86,6 +86,3 @@ const Menubar = () => {
 
 export default Menubar;
 
-// {/* <Button onClick={logOut} className="btn btn-success">
-// Sign Out
-// </Button> */}
