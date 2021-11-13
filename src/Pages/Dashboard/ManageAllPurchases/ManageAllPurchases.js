@@ -3,6 +3,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const ManageAllPurchases = () => {
     const [shippingConfirm, setShippingConfirm] = useState(true);
@@ -15,37 +16,64 @@ const ManageAllPurchases = () => {
     }, [shippingConfirm])
 
     const deleteHandle = id => {
-        const proceed = window.confirm('Are you sure want to cancel');
-        if (proceed) {
-            const url = `https://damp-cove-65094.herokuapp.com/purchases/${id}`;
-            fetch(url, {
-                method: 'DELETE',
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount) {
-                        alert('Successfully canceled')
-                        const remaining = managePurchases.filter(managePurchase => managePurchase?._id !== id);
-                        setManagePurchases(remaining);
-                    }
-                });
-        }
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const url = `https://damp-cove-65094.herokuapp.com/purchases/${id}`;
+                fetch(url, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            const remaining = managePurchases.filter(managePurchase => managePurchase?._id !== id);
+                            setManagePurchases(remaining);
+                        }
+                    });
+
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        })
     }
 
     const handleShipping = id => {
-        const shipping = window.confirm('Are you sure to shipping purchase?')
-        if (shipping) {
-            fetch(`https://damp-cove-65094.herokuapp.com/purchases/${id}`, {
-                method: 'PUT',
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.modifiedCount === 1) {
-                        alert('Purchase Confirmed Successfully');
-                        setShippingConfirm(!shipping)
-                    }
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Confirm!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://damp-cove-65094.herokuapp.com/purchases/${id}`, {
+                    method: 'PUT',
                 })
-        }
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.modifiedCount === 1) {
+                            setShippingConfirm(!shippingConfirm)
+                        }
+                    })
+                Swal.fire(
+                    'Confirmed!',
+                    'Your file has been confirmed.',
+                    'success'
+                )
+            }
+        })
     }
 
     return (

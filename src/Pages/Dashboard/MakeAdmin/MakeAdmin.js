@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import admin from '../../../images/admin.jpg';
 
 const MakeAdmin = () => {
@@ -20,7 +21,7 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
-                    alert('Successfully Admin added')
+                    Swal.fire('Successfully Admin Added')
                 }
             })
         e.preventDefault()

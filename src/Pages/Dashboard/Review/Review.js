@@ -2,6 +2,7 @@ import React from 'react';
 import useAuth from '../../../Hooks/useAuth';
 import { useForm } from 'react-hook-form';
 import review from '../../../images/review-1.png';
+import Swal from 'sweetalert2';
 
 const Review = () => {
     const { user } = useAuth();
@@ -18,7 +19,7 @@ const Review = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.insertedId) {
-                    alert('review added successfully')
+                    Swal.fire('Review added successfully')
                     reset()
                 }
             });

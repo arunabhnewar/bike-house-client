@@ -2,6 +2,7 @@ import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
@@ -14,25 +15,39 @@ const ManageProducts = () => {
 
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure want to remove');
-        if (proceed) {
-            const url = `https://damp-cove-65094.herokuapp.com/products/${id}`;
-            fetch(url, {
-                method: 'DELETE',
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount) {
-                        alert('Successfully removed')
-                        const remaining = products.filter(product => product?._id !== id);
-                        setProducts(remaining);
-                    }
-                });
-        }
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const url = `https://damp-cove-65094.herokuapp.com/products/${id}`;
+                fetch(url, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            // alert('Successfully removed')
+                            const remaining = products.filter(product => product?._id !== id);
+                            setProducts(remaining);
+                        }
+                    });
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        })
     }
 
     return (
-        <div className="container-fluid py-5" style={{ backgroundColor: "#80d572", height: "100vh" }}>
+        <div className="container-fluid py-5" style={{ backgroundColor: "#80d572", height: "auto" }}>
             <h1 className="pt-5 fw-bold" style={{ color: '#163336' }}>Manage Products OverView</h1>
             <h5 className=" pt-3" style={{ color: '#163336' }}>Total Products in the website: <span style={{ color: "#df453e" }}>{products.length}</span> </h5>
 

@@ -7,6 +7,7 @@ import { faStar as fullStar, } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 import './Purchase.css'
+import Swal from 'sweetalert2';
 
 const Purchase = () => {
     const { id } = useParams();
@@ -38,7 +39,7 @@ const Purchase = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    alert('Your purchase successfully added')
+                    Swal.fire('Your Order Successfully Added!!')
                     reset();
                 }
             })
