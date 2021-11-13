@@ -30,7 +30,7 @@ import "react-pro-sidebar/dist/css/styles.css";
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth();
+    const { admin, logOut } = useAuth();
 
 
     //create initial menuCollapse state using useState hook
@@ -117,7 +117,7 @@ const Dashboard = () => {
                             <SidebarFooter>
                                 <Menu iconShape="square">
                                     <MenuItem icon={<FiLogOut />}>
-                                        <Link to="/home" className="dashboard-menu-item text-decoration-none"> Back </Link>
+                                        <li onClick={logOut} className="dashboard-menu-item text-decoration-none"> Sign Out </li>
                                     </MenuItem>
                                 </Menu>
                             </SidebarFooter>
