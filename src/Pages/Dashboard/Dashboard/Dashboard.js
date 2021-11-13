@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Dashboard.css'
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from '../../../Hooks/useAuth';
@@ -11,103 +11,121 @@ import ManageProducts from '../ManageProducts/ManageProducts';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus, faCogs, faLongArrowAltLeft, faPlusSquare, faTasks, faUserCog, faUserShield } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, faCogs, faPlusSquare, faTasks, faUserCog, faUserShield } from '@fortawesome/free-solid-svg-icons';
 import { faCcVisa } from '@fortawesome/free-brands-svg-icons';
 import { faStar, faUser } from '@fortawesome/free-regular-svg-icons';
+import Footer from '../../Shared/Footer/Footer'
 
+
+
+import { ProSidebar, Menu, MenuItem, SidebarHeader, SidebarFooter, SidebarContent, } from "react-pro-sidebar";
+
+//import icons from react icons
+import { FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+
+
+//import sidebar css from react-pro-sidebar module and our custom css 
+import "react-pro-sidebar/dist/css/styles.css";
 
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const { admin } = useAuth();
+
+
+    //create initial menuCollapse state using useState hook
+    const [menuCollapse, setMenuCollapse] = useState(false)
+
+    //create a custom function that will change menucollapse state from false to true and true to false
+    const menuIconClick = () => {
+        //condition checking to change state from true to false and vice versa
+        menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+    };
+
     return (
 
-        <div className="container-fluid">
+        <>
+
             <div className="row">
-
-                <div className="col-md-3 col-sm-12 dashboard-menubar" style={{ backgroundColor: '#2F4F4F' }}>
-                    <div className="accordion pt-3" id="accordionExample">
-
-
-                        {admin &&
-                            <div className="accordion-item mt-3 border-white" style={{ backgroundColor: '#2F4F4F' }}>
-
-                                <h2 className="accordion-header" id="headingOne">
-                                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{ backgroundColor: '#2F4F4F', color: "#df453e" }}>
-                                        <FontAwesomeIcon className="m-1" icon={faUserShield} />  Admin Dashboard
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div className="accordion-body">
-
-                                        <Link className="text-decoration-none" to={`${url}/makeAdmin`}>
-                                            <li className="dashboard-menu-item text-start"
-                                                style={{ color: "#fff" }}>
-                                                <FontAwesomeIcon icon={faUserCog} /> Make Admin</li>
-                                        </Link>
-
-                                        <Link className="text-decoration-none" to={`${url}/addProduct`}>
-                                            <li className="dashboard-menu-item text-start"
-                                                style={{ color: "#fff" }}>
-                                                <FontAwesomeIcon icon={faPlusSquare} /> Add Product</li>
-                                        </Link>
-
-                                        <Link className="text-decoration-none" to={`${url}/manageProducts`}>
-                                            <li className="dashboard-menu-item text-start"
-                                                style={{ color: "#fff" }}>
-                                                <FontAwesomeIcon icon={faTasks} /> Manage Products</li>
-                                        </Link>
-
-                                        <Link className="text-decoration-none" to={`${url}/manageAllPurchases`}>
-                                            <li className="dashboard-menu-item text-start"
-                                                style={{ color: "#fff" }}>
-                                                <FontAwesomeIcon icon={faCogs} /> Manage All Purchases</li>
-                                        </Link>
-                                    </div>
+                <div className="col-md-3 col-sm-12 p-0" style={{ backgroundColor: "#80d572" }}>
+                    <div id="header" className="">
+                        {/* collapsed props to change menu size using menucollapse state */}
+                        <ProSidebar collapsed={menuCollapse}>
+                            <SidebarHeader>
+                                <div className="logotext pt-3">
+                                    {/* small and big change using menucollapse state */}
+                                    <p>{menuCollapse ? "Logo" : "Bike House"}</p>
                                 </div>
-                            </div>
-                        }
-
-                        <div className="accordion-item border-white" style={{ backgroundColor: '#2F4F4F' }}>
-                            <h2 className="accordion-header" id="headingTwo">
-                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={{ backgroundColor: '#2F4F4F', color: '#fff' }}>
-                                    <FontAwesomeIcon className="m-1" icon={faUser} />  User Dashboard
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div className="accordion-body">
-
-
-                                    <Link className="text-decoration-none" to={`${url}`}>
-                                        <li className="dashboard-menu-item text-start"
-                                            style={{ color: "#df453e" }}>
-                                            <FontAwesomeIcon icon={faCartPlus} /> My Purchases</li>
-                                    </Link>
-
-                                    <Link className="text-decoration-none" to={`${url}/payment`}>
-                                        <li className="dashboard-menu-item text-start"
-                                            style={{ color: "#df453e" }}>
-                                            <FontAwesomeIcon icon={faCcVisa} /> Payment</li>
-                                    </Link>
-
-                                    <Link className="text-decoration-none" to={`${url}/review`}>
-                                        <li className="dashboard-menu-item text-start"
-                                            style={{ color: "#df453e" }}>
-                                            <FontAwesomeIcon icon={faStar} /> Review</li>
-                                    </Link>
+                                <div className="closemenu" onClick={menuIconClick}>
+                                    {/* changing menu collapse icon on click */}
+                                    {menuCollapse ? (
+                                        <FiArrowRightCircle />
+                                    ) : (
+                                        <FiArrowLeftCircle />
+                                    )}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </SidebarHeader>
 
-                    <div className="text-start mt-5 pt-5">
-                        <Link to="/home" className="dashboard-menu-item text-decoration-none text-white">
-                            <FontAwesomeIcon icon={faLongArrowAltLeft} />  Back
-                        </Link>
+                            {
+                                admin &&
+                                <SidebarContent>
+                                    <Menu iconShape="square">
+                                        <MenuItem active={true} >
+                                            <FontAwesomeIcon className="m-1" icon={faUserShield} />  Admin
+                                        </MenuItem>
+                                        <MenuItem>
+                                            <Link className="text-decoration-none" to={`${url}/makeAdmin`}>
+                                                <FontAwesomeIcon icon={faUserCog} /> Make Admin</Link>
+                                        </MenuItem>
+                                        <MenuItem >
+                                            <Link className="text-decoration-none" to={`${url}/addProduct`}>
+                                                <FontAwesomeIcon icon={faPlusSquare} /> Add Product</Link>
+                                        </MenuItem>
+                                        <MenuItem>
+                                            <Link className="text-decoration-none" to={`${url}/manageProducts`}>
+                                                <FontAwesomeIcon icon={faTasks} /> Manage Products</Link>
+                                        </MenuItem>
+                                        <MenuItem >
+                                            <Link className="text-decoration-none" to={`${url}/manageAllPurchases`}>
+                                                <FontAwesomeIcon icon={faCogs} /> Manage All Purchase</Link>
+                                        </MenuItem>
+                                    </Menu>
+                                </SidebarContent>
+                            }
+
+                            <SidebarContent>
+                                <Menu iconShape="square">
+                                    <MenuItem active={true} >
+                                        <FontAwesomeIcon className="m-1" icon={faUser} />  User
+                                    </MenuItem>
+                                    <MenuItem>
+                                        <Link className="text-decoration-none" to={`${url}`}>
+                                            <FontAwesomeIcon icon={faCartPlus} /> My Purchase</Link>
+                                    </MenuItem>
+                                    <MenuItem >
+                                        <Link className="text-decoration-none" to={`${url}/review`}>
+                                            <FontAwesomeIcon icon={faStar} /> Review </Link>
+                                    </MenuItem>
+                                    <MenuItem>
+                                        <Link className="text-decoration-none" to={`${url}/payment`}>
+                                            <FontAwesomeIcon icon={faCcVisa} /> Payment </Link>
+                                    </MenuItem>
+
+                                </Menu>
+                            </SidebarContent>
+
+                            <SidebarFooter>
+                                <Menu iconShape="square">
+                                    <MenuItem icon={<FiLogOut />}>
+                                        <Link to="/home" className="dashboard-menu-item text-decoration-none"> Back </Link>
+                                    </MenuItem>
+                                </Menu>
+                            </SidebarFooter>
+                        </ProSidebar>
                     </div>
                 </div>
 
-                <div className="col-md-9">
+                <div className="col-md-9 col-sm-12 p-0">
 
                     <Switch>
                         <Route exact path={path}>
@@ -134,9 +152,10 @@ const Dashboard = () => {
                         </AdminRoute>
                     </Switch>
                 </div>
-
+                <Footer />
             </div>
-        </div>
+
+        </>
 
     );
 };

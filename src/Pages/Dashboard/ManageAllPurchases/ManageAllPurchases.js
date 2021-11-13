@@ -49,7 +49,7 @@ const ManageAllPurchases = () => {
     }
 
     return (
-        <div className="container-fluid py-5" style={{ backgroundColor: "#80d572" }}>
+        <div className="container-fluid py-5" style={{ backgroundColor: "#80d572", height: "100vh" }}>
             <h1 className="pt-5 fw-bold" style={{ color: '#163336' }}>Manage All Purchases Overview</h1>
             <h5 className=" pt-3" style={{ color: '#163336' }}>Users Total purchase list: <span style={{ color: "#df453e" }}>{managePurchases?.length}</span> </h5>
 

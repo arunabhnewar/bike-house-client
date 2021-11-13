@@ -5,7 +5,6 @@ import AuthProvider from './Context/AuthProvider';
 import Home from './Pages/Home/Home/Home';
 import Products from './Pages/Products/Products';
 import Menubar from './Pages/Shared/Menubar/Menubar';
-import Footer from './Pages/Shared/Footer/Footer';
 import Purchase from './Pages/Purchase/Purchase';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Login from './Pages/Login/Login/Login';
@@ -46,9 +45,8 @@ function App() {
             <Route exact path="*">
               <NotFound />
             </Route>
-
           </Switch>
-          <Footer />
+
         </Router>
       </AuthProvider>
     </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Product from './Product/Product';
 import './Products.css';
 import Zoom from 'react-reveal/Zoom';
+import Footer from '../Shared/Footer/Footer';
 
 
 const Products = () => {
@@ -37,6 +38,7 @@ const Products = () => {
                     ></Product>)
                 }
             </div>
+            <Footer />
         </div>
     );
 };

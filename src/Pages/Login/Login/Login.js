@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import login2 from '../../../images/login-2.jpg';
 
+
 const Login = () => {
     const { user, handleLogin, signInWithGoogle, isLoading, authError } = useAuth();
     const [loginData, setLoginData] = useState({});
@@ -73,8 +74,8 @@ const Login = () => {
                     </form>
 
                 </div>
-
             </div>
+
         </div>
     );
 };

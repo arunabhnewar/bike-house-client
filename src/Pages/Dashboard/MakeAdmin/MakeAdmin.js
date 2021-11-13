@@ -26,8 +26,8 @@ const MakeAdmin = () => {
         e.preventDefault()
     }
     return (
-        <div className="container py-5" style={{ backgroundColor: "#80d572" }}>
-            <div className="row mx-auto mb-5 pb-5">
+        <div className="container py-5" style={{ backgroundColor: "#80d572", height: '90vh' }}>
+            <div className="row  mb-5 pb-5">
                 <div className="col-md-6 col-sm-12">
                     <img className="img-fluid w-50" src={admin} alt="" />
                 </div>
