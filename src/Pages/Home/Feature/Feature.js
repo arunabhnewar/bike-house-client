@@ -7,17 +7,23 @@ import { faStar as fullStar } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './Feature.css';
 
+
+
 const Feature = ({ feature }) => {
     const { _id, title, brand, category, rating, price, img } = feature;
+
     return (
         <div className="row mx-auto">
             <div className="col-md-4 col-sm-12">
+
+
+
 
                 <Card className="mx-auto my-3 featured-item rounded-3" style={{ width: '16rem' }} >
                     <div className="img-container">
                         <Card.Img variant="top" src={img} />
                         <div className="img-text">
-                            <h5>Featured</h5>
+                            <h5>Premium</h5>
                         </div>
                     </div>
 

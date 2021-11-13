@@ -8,13 +8,16 @@ import team5 from '../../../images/team/team-5.jpg';
 import team6 from '../../../images/team/team-6.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faInstagramSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import Zoom from 'react-reveal/Zoom';
 
 const Team = () => {
     return (
         <div className="container my-5 pt-5">
-            <h1 className="fw-bold" style={{ color: "#163336" }}>Our Team</h1>
-            <div className="row mx-auto">
+            <Zoom top cascade>
+                <h1 className="fw-bold" style={{ color: "#163336" }}>Our Team</h1>
+            </Zoom>
 
+            <div className="row mx-auto">
                 <div className="col-md-4 col-sm-12 pt-5">
                     <div className="team-img">
                         <img className="img-fluid" src={team1} alt="" />

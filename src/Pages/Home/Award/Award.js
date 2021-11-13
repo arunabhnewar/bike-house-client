@@ -6,11 +6,15 @@ import award9 from '../../../images/awards/award-9.png';
 import award10 from '../../../images/awards/award-10.png';
 import award11 from '../../../images/awards/award-11.png';
 import award12 from '../../../images/awards/award-12.png';
+import Zoom from 'react-reveal/Zoom';
 
 const Award = () => {
     return (
         <div className="container my-5 pt-5">
-            <h1 style={{ color: '#163336' }} className="fw-bold pt-5 pb-5">Awards</h1>
+            <Zoom top cascade>
+                <h1 style={{ color: '#163336' }} className="fw-bold pt-5 pb-5">Awards</h1>
+            </Zoom>
+
             <div className="row mx-auto p-5" style={{ backgroundColor: '#A3B4B7' }}>
                 <div className="col-md-2 col-sm-12 pb-3 ">
                     <img className="award-item" src={award7} alt="" />

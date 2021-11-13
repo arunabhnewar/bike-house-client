@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Testimonial from './Testimonial/Testimonial';
 import './Testimonials.css';
+import Zoom from 'react-reveal/Zoom';
 
 const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
@@ -12,7 +13,9 @@ const Testimonials = () => {
     }, [])
     return (
         <div className="container my-5 pt-5">
-            <h1 style={{ color: '#163336' }} className="fw-bold">Testimonials</h1>
+            <Zoom top cascade>
+                <h1 style={{ color: '#163336' }} className="fw-bold">Testimonials</h1>
+            </Zoom>
 
             <div className="testimonials-container py-5">
                 {

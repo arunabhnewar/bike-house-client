@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Feature from '../Feature/Feature';
 import './Features.css';
+import Zoom from 'react-reveal/Zoom';
 
 const Features = () => {
     const [features, setFeatures] = useState([]);
@@ -13,7 +14,9 @@ const Features = () => {
 
     return (
         <div className="my-5 pt-5">
-            <h1 style={{ color: '#163336' }} className="fw-bold">Featured Products</h1>
+            <Zoom left cascade>
+                <h1 style={{ color: '#163336' }} className="fw-bold">Featured Products</h1>
+            </Zoom>
 
             <div className="features-container py-5">
                 {

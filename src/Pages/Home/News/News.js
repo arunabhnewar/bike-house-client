@@ -4,11 +4,15 @@ import news1 from '../../../images/news/news-1.jpg'
 import news2 from '../../../images/news/news-2.jpg'
 import news3 from '../../../images/news/news-3.jpg'
 import './News.css';
+import Zoom from 'react-reveal/Zoom';
 
 const News = () => {
     return (
         <div className="container my-5 pt-5">
-            <h1 style={{ color: '#163336' }} className="fw-bold mt-5 py-5">Our Latest News</h1>
+            <Zoom top cascade>
+                <h1 style={{ color: '#163336' }} className="fw-bold mt-5 py-5">Our Latest News</h1>
+            </Zoom>
+
             <div className="row">
 
                 <div className="col-md-4 col-sm-12">
