@@ -9,6 +9,7 @@ import team6 from '../../../images/team/team-6.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faInstagramSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import Zoom from 'react-reveal/Zoom';
+import Slide from 'react-reveal/Slide';
 
 const Team = () => {
     return (
@@ -18,130 +19,134 @@ const Team = () => {
             </Zoom>
 
             <div className="row mx-auto">
-                <div className="col-md-4 col-sm-12 pt-5">
-                    <div className="team-img">
-                        <img className="img-fluid" src={team1} alt="" />
-                        <div className="team-info">
-                            <h4>Thomas Gilbert</h4>
-                            <span>Logistics Manager</span>
+
+                <Slide left>
+                    <div className="col-md-4 col-sm-12 pt-5">
+                        <div className="team-img">
+                            <img className="img-fluid" src={team1} alt="" />
+                            <div className="team-info">
+                                <h4>Thomas Gilbert</h4>
+                                <span>Logistics Manager</span>
+                            </div>
+                        </div>
+
+                        <div >
+                            <div className="social-media">
+                                <p style={{ color: "#163336" }}>
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div >
-                        <div className="social-media">
-                            <p style={{ color: "#163336" }}>
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
-                            </p>
+
+                    <div className="col-md-4 col-sm-12 pt-5">
+                        <div className="team-img">
+                            <img className="img-fluid" src={team2} alt="" />
+                            <div className="team-info">
+                                <h4>Thomas J. White</h4>
+                                <span>Operations Manager</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-
-                <div className="col-md-4 col-sm-12 pt-5">
-                    <div className="team-img">
-                        <img className="img-fluid" src={team2} alt="" />
-                        <div className="team-info">
-                            <h4>Thomas J. White</h4>
-                            <span>Operations Manager</span>
-                        </div>
-                    </div>
-
-                    <div >
-                        <div className="social-media">
-                            <p style={{ color: "#163336" }}>
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="col-md-4 col-sm-12 pt-5">
-                    <div className="team-img">
-                        <img className="img-fluid" src={team3} alt="" />
-                        <div className="team-info">
-                            <h4>Samantha Black</h4>
-                            <span>Master Mechanic</span>
+                        <div >
+                            <div className="social-media">
+                                <p style={{ color: "#163336" }}>
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div >
-                        <div className="social-media">
-                            <p style={{ color: "#163336" }}>
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
-                            </p>
+
+                    <div className="col-md-4 col-sm-12 pt-5">
+                        <div className="team-img">
+                            <img className="img-fluid" src={team3} alt="" />
+                            <div className="team-info">
+                                <h4>Samantha Black</h4>
+                                <span>Master Mechanic</span>
+                            </div>
+                        </div>
+
+                        <div >
+                            <div className="social-media">
+                                <p style={{ color: "#163336" }}>
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Slide>
 
-
-                <div className="col-md-4 col-sm-12 pt-5">
-                    <div className="team-img">
-                        <img className="img-fluid" src={team4} alt="" />
-                        <div className="team-info">
-                            <h4>James Wilson</h4>
-                            <span>Master Mechanic</span>
+                <Slide right>
+                    <div className="col-md-4 col-sm-12 pt-5">
+                        <div className="team-img">
+                            <img className="img-fluid" src={team4} alt="" />
+                            <div className="team-info">
+                                <h4>James Wilson</h4>
+                                <span>Master Mechanic</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div >
-                        <div className="social-media">
-                            <p style={{ color: "#163336" }}>
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="col-md-4 col-sm-12 pt-5">
-                    <div className="team-img">
-                        <img className="img-fluid" src={team5} alt="" />
-                        <div className="team-info">
-                            <h4>Jenny Wallace</h4>
-                            <span>Operations Manager</span>
-                        </div>
-                    </div>
-
-                    <div >
-                        <div className="social-media">
-                            <p style={{ color: "#163336" }}>
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="col-md-4 col-sm-12 pt-5">
-                    <div className="team-img">
-                        <img className="img-fluid" src={team6} alt="" />
-                        <div className="team-info">
-                            <h4>Mary Dalton</h4>
-                            <span>Sales Manager</span>
+                        <div >
+                            <div className="social-media">
+                                <p style={{ color: "#163336" }}>
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div >
-                        <div className="social-media">
-                            <p style={{ color: "#163336" }}>
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
-                                <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
-                            </p>
+
+                    <div className="col-md-4 col-sm-12 pt-5">
+                        <div className="team-img">
+                            <img className="img-fluid" src={team5} alt="" />
+                            <div className="team-info">
+                                <h4>Jenny Wallace</h4>
+                                <span>Operations Manager</span>
+                            </div>
+                        </div>
+
+                        <div >
+                            <div className="social-media">
+                                <p style={{ color: "#163336" }}>
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+
+                    <div className="col-md-4 col-sm-12 pt-5">
+                        <div className="team-img">
+                            <img className="img-fluid" src={team6} alt="" />
+                            <div className="team-info">
+                                <h4>Mary Dalton</h4>
+                                <span>Sales Manager</span>
+                            </div>
+                        </div>
+
+                        <div >
+                            <div className="social-media">
+                                <p style={{ color: "#163336" }}>
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faFacebookSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faInstagramSquare} />
+                                    <FontAwesomeIcon style={{ fontSize: '42px', paddingRight: "10px", cursor: 'pointer' }} icon={faTwitterSquare} />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </Slide>
 
             </div>
         </div>
